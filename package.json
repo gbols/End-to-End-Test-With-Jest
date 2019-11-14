@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "env-cmd -f ./config/test.env",
+    "test": "env-cmd -f ./config/test.env jest",
     "dev": "env-cmd -f ./config/dev.env nodemon --exec babel-node index.js"
+  },
+  "jest": {
+    "globalSetup": "./tests/config/globalSetup.js",
+    "globalTeardown": "./tests/config/globalTeardown.js"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +26,12 @@
     "@babel/cli": "^7.7.0",
     "@babel/core": "^7.7.0",
     "@babel/node": "^7.7.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/plugin-transform-spread": "^7.6.2",
-    "@babel/preset-env": "^7.7.1"
+    "@babel/preset-env": "^7.7.1",
+    "@babel/register": "^7.7.0",
+    "@babel/runtime": "^7.7.2",
+    "apollo-boost": "^0.4.4",
+    "jest": "^24.9.0"
   }
 }
