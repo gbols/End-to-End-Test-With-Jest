@@ -17,6 +17,6 @@ export const User = {
     const { req } = context;
     const { id }= decodeToken(req, false);
     if (id && id === parent.id) return parent.email
-    else return null
+    return null
   }
 }

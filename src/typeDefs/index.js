@@ -24,13 +24,13 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    "User CRUD functionality"
+    # "User CRUD functionality"
     createUser(data: createUserInput!) : AuthPayLoad!
     loginUser(data: loginUserInput!): AuthPayLoad!
     deleteUser(id: ID!): User!
     updateUser(id: ID!, data: updateUserInput!): User!
 
-    "Todo CRUD functionality"
+    # "Todo CRUD functionality"
     createTodo(data: createTodoInput!): Todo!
     updateTodo(id: ID!, data: updateTodoInput!): Todo!
     deleteTodo(id: ID!): Todo!
